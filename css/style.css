@@ -203,7 +203,7 @@
 }
 
 .contacto .rectangulo{
-  background-color:rgb(0, 179, 250);
+  background-color:rgb(144, 6, 198);
   border-radius: 10px;
 }
 
@@ -281,7 +281,7 @@
 }
 
 .objetivos .columna {
-  padding: 20px;
+  padding: 30px;
   border: 2.5px solid white;
   color: white;
   display: flex;
@@ -322,6 +322,7 @@
 
 .badge{
   margin: 5px;
+  background-color: rgb(144, 6, 198);
 }
 
 /* Seccion ubicacion  */
