@@ -1,4 +1,3 @@
-
 # White Crown
 
 Proyecto para una actividad escolar que escalo hacia  una trabajo final de un curso de Coderhouse en desarrollo web en 2022.
@@ -14,6 +13,6 @@ Proyecto para una actividad escolar que escalo hacia  una trabajo final de un cu
 
 Imágenes v1:
 
-![App Screenshot](./)
-![App Screenshot](./)
+![App Screenshot](./img/screen1.png)
+![App Screenshot](./img/screen2.png)
 
