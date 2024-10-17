@@ -17,6 +17,3 @@ Imágenes v1:
 ![App Screenshot](./)
 ![App Screenshot](./)
 
-
-![App Screenshot](./)
-![App Screenshot](./)
