@@ -12,6 +12,8 @@
   <meta name="description" content="Marca de ropa dedicado al estilo urbano, utilizamos 100% algodon">
   <!-- Tailwind -->
   <link rel="stylesheet"href="../dist/output.css">
+  <!-- webcomponent -->
+  <script type="module" src="./index.js"></script>
   <!-- Google fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -52,13 +54,48 @@
     ¡Actualmente se encuentran desabilitadas las compras en el sitio web, por ahora unicamente en instagram!
   </p>
   <!-- Main -->
-  <main class="flex flex-col items-center justify-center mt-1 m-[5%]">
-    <section class="flex flex-col">
-      <h1 class="text-center text-5xl font-semibold">WHITE CROWN</h1>
-      <span>
+  <main class="flex flex-col items-center justify-center mx-auto mt-5">
+    <!-- CTO -->
+    <section class="flex flex-col my-[2%] mx-[5%]">
+      <h1 class="text-7xl font-semibold">WHITE CROWN</h1>
+      <span class="m-2 mt-4 text-lg">
         La marca de ropa surge a traves de un trabajo escolar en donde los 5 compañeros crean esta empresa, a dia de hoy una vez terminado ese trabajo la mayoria de los integrantes se marcharon, dejando a los integrantes actuales.
       </span>
-      <button>CONOCER MÁS</button>
+      <button class="p-2 m-2 w-[20%] bg-mdark rounded-md text-mwhite font-bold transition-all ease-in duration-200 hover:bg-mwhite hover:border-mviolet hover:text-mviolet">CONOCER MÁS</button>
+    </section>
+    <!-- Slider -->
+    <section class="flex my-[2%] mx-[5%]">
+      <swiper-container slides-per-view="3" speed="500" loop="true" css-mode="true">
+        <swiper-slide>
+          <destacado-producto>1</destacado-producto>
+        </swiper-slide>
+        <swiper-slide>
+          <destacado-producto>2</destacado-producto>
+        </swiper-slide>
+        <swiper-slide>
+          <destacado-producto>3</destacado-producto>
+        </swiper-slide>
+      </swiper-container>
+    </section>
+    <!-- Products -->
+    <section class="flex my-[2%] mx-[5%]">
+      
+      <card-producto name="remera">
+        <span>Muy buen producto</span>
+      </card-producto>
+
+      <card-producto name="pantalon">
+        <span>Muy buen producto</span>
+      </card-producto>
+
+      <card-producto name="pantalon">
+        <span>Muy buen producto</span>
+      </card-producto>
+
+    </section>
+    <!-- About Us-->
+    <section>
+      
     </section>
   </main>
 
@@ -102,16 +139,15 @@
   </section>
   <!-- Seccion HERO -->
   <main>
-    <section>
-      <!-- Carrousel -->
-    </section>
+    
     <section>
       <!-- Info -->
     </section>
-    <section>
-      <!-- Productos-->
+    <section class="flex items-center justify-center m-auto p-4"> 
     </section>
   </main>
+
+
   <!-- FOOTER -->
   <footer class="bg-mdark flex flex-col">
     <!-- Productos -->
