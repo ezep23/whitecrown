@@ -1,15 +1,17 @@
-class Producto extends HTMLElement {
-    static name = "card-producto"
-    constructor(){ 
-        super();
-        const name = this.getAttribute("name");
-        const html = `<div class="">
-        <img src="./img/${name}.jpg" alt="${name}">
-        <p>${name.toUpperCase()}</p>
-    </div>`;
-    this.insertAdjacentHTML("beforeend", html);
-    }
-    
+let indiceActual = 0;
+mostrarSlide(indiceActual);
+
+function mostrarSlide(n) {
+  let slides = document.querySelectorAll(".slides img");
+  // Esconder todas las imágenes
+  slides.forEach(slide => slide.style.display = "none");
+  // Ajustar el índice si se sale del rango
+  if (n >= slides.length) indiceActual = 0;
+  if (n < 0) indiceActual = slides.length - 1;
+  // Mostrar la imagen actual
+  slides[indiceActual].style.display = "block";
 }
 
-customElements.define(Producto.name, Producto)
+function moverSlide(n) {
+  mostrarSlide(indiceActual += n);
+}
