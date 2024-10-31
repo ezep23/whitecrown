@@ -12,7 +12,8 @@ module.exports = {
         "mwhite": "#f1f1f1",
         "mdark": "#000",
         "mviolet": "#9006c6"
-      } 
+      }
+
     },
   },
   plugins: [],

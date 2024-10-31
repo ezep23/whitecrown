@@ -21,6 +21,6 @@
     "tailwindcss": "^3.4.14"
   },
   "dependencies": {
-    "swiper": "^11.1.14"
+    "lit": "^3.2.1"
   }
 }
