@@ -63,11 +63,73 @@
       <button class="p-2 m-2 w-[20%] bg-mdark rounded-md text-mwhite font-bold transition-all ease-in duration-200 hover:bg-mwhite hover:border-mviolet hover:text-mviolet">CONOCER MÁS</button>
     </section>
     <!-- Slider -->
+    <div class="relative overflow-hidden">
+      <div class="flex overflow-hidden w-[100%]">
+          <ul id="carousel-track" class="flex gap-14 transition-transform duration-300 ease-in-out">
+              <li class="list-none">
+                <card-product name="buzo">
+                  <span slot="descripcion">Descripción personalizada del producto.</span>
+                  <span slot="precio">$1500</span>
+                </card-product>
+              </li>
+              <li class="list-none">
+                <card-product name="buzo">
+                  <span slot="descripcion">Descripción personalizada del producto.</span>
+                  <span slot="precio">$1500</span>
+                </card-product>
+              </li>
+              <li class="list-none">
+                <card-product name="buzo">
+                  <span slot="descripcion">Descripción personalizada del producto.</span>
+                  <span slot="precio">$1500</span>
+                </card-product>
+              </li>
+          </ul>
+      </div>
+      <button id="carousel-button--left" class="absolute top-[50%] translate-y-[50%] text-mdark border-none p-4 pointer right-4">⬅</button>
+      <button id="carousel-button--right" class="absolute top-[50%] translate-y-[50%] text-mdark border-none p-4 pointer right-4">➡</button>
+    </div>
     <!-- Products -->
-    <section class="flex gap-2 my-[2%] mx-[5%]">
-      <card-product name="buzo"></card-product>
-      <card-product name="chomba"></card-product>
-      <card-product name="remera"></card-product>
+    <section class="flex flex-col my-[2%] mx-[5%]">
+      <h3 class="text-center text-6xl font-bold my-[2%]">TODOS LOS PRODUCTOS</h3>
+      <div class="grid grid-cols-3 gap-8">
+        <card-product name="buzo">
+          <span slot="descripcion">Descripción personalizada del producto.</span>
+          <span slot="precio">$18000</span>
+        </card-product>
+        <card-product name="campera">
+          <span slot="descripcion">Descripción personalizada del producto.</span>
+          <span slot="precio">$15000</span>
+        </card-product>
+        <card-product name="chomba">
+          <span slot="descripcion">Descripción personalizada del producto.</span>
+          <span slot="precio">$8500</span>
+        </card-product>
+        <card-product name="gorro">
+          <span slot="descripcion">Descripción personalizada del producto.</span>
+          <span slot="precio">$3500</span>
+        </card-product>
+        <card-product name="pantalon">
+          <span slot="descripcion">Descripción personalizada del producto.</span>
+          <span slot="precio">$10500</span>
+        </card-product>
+        <card-product name="remera">
+          <span slot="descripcion">Descripción personalizada del producto.</span>
+          <span slot="precio">$5500</span>
+        </card-product>
+        <card-product name="chomba">
+          <span slot="descripcion">Descripción personalizada del producto.</span>
+          <span slot="precio">$1500</span>
+        </card-product>
+        <card-product name="campera">
+          <span slot="descripcion">Descripción personalizada del producto.</span>
+          <span slot="precio">$1500</span>
+        </card-product>
+        <card-product name="buzo">
+          <span slot="descripcion">Descripción personalizada del producto.</span>
+          <span slot="precio">$1500</span>
+        </card-product>
+      </div>
     </section>
     <!-- About Us-->
     <section>
@@ -183,6 +245,6 @@
     </div>
   </footer>
   <!-- Javascript -->
-
+  <script src="./index.js"></script>
 </body>
 </html>
