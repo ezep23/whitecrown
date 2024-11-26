@@ -5,7 +5,7 @@ class Product extends HTMLElement {
         
         // Producto
         const HTML = `<div class="contenedor">
-            <img class="imagen" src="../img/${this.getAttribute("name")}.jpg">
+            <img class="imagen" src="/img/${this.getAttribute("name")}.jpg">
             <p class="titulo">${this.getAttribute("name").toUpperCase()}</p>
             <slot name="descripcion"></slot>
             <slot class="precio" name="precio"></slot>
@@ -20,7 +20,8 @@ class Product extends HTMLElement {
 
         // Funcionalidades del producto
         container.querySelector('#comprar').addEventListener('click', () => {
-            this.dispatchEvent(new CustomEvent('button-click', { bubbles: true, composed: true }));
+            localStorage.setItem("nombre", this.getAttribute("name"))
+            window.location.href = './src/product/product.html'
         });
 
         // Estilos del producto
