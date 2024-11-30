@@ -1,11 +1,11 @@
-class Product extends HTMLElement {
+class Products extends HTMLElement {
     constructor() {
         super(); 
         this.attachShadow({ mode: 'open' }); 
         
         // Producto
         const HTML = `<div class="contenedor">
-            <img class="imagen" src="/img/${this.getAttribute("name")}.jpg">
+            <img class="imagen" src="./src/img/${this.getAttribute("name")}.jpg">
             <p class="titulo">${this.getAttribute("name").toUpperCase()}</p>
             <slot name="descripcion"></slot>
             <slot class="precio" name="precio"></slot>
@@ -18,13 +18,7 @@ class Product extends HTMLElement {
         const container = document.createElement('div');
         container.innerHTML = HTML;
 
-        // Funcionalidades del producto
-        container.querySelector('#comprar').addEventListener('click', () => {
-            localStorage.setItem("nombre", this.getAttribute("name"))
-            window.location.href = './src/product/product.html'
-        });
-
-        // Estilos del producto
+        // Estilos 
         const style = document.createElement('style');
         style.textContent = `
             .contenedor {
@@ -50,7 +44,7 @@ class Product extends HTMLElement {
                 text-align: justify;
             }
 
-            .precio{
+            .precio {
                 font-weight: bold;
             }
 
@@ -63,10 +57,36 @@ class Product extends HTMLElement {
                 width: 50%;
             }
         `;
+
         this.shadowRoot.appendChild(container);
         this.shadowRoot.appendChild(style);
     }
-}
 
-customElements.define('card-product', Product);
+    connectedCallback() {
+        const descripcionSlot = this.shadowRoot.querySelector('slot[name="descripcion"]');
+        const precioSlot = this.shadowRoot.querySelector('slot[name="precio"]');
+    
+        // Obtenemos el contenido del slot
+        const descripcionNodes = descripcionSlot.assignedNodes({ flatten: true });
+        const precioNodes = precioSlot.assignedNodes({ flatten: true });
+    
+        const descripcion = descripcionNodes.length > 0 
+            ? descripcionNodes.map(node => node.textContent.trim()).join(' ') 
+            : 'Sin descripción';
+    
+        const precio = precioNodes.length > 0 
+            ? precioNodes.map(node => node.textContent.trim()).join(' ') 
+            : 'Sin precio';
+    
+        // Funcionalidad del botón
+        this.shadowRoot.querySelector('#comprar').addEventListener('click', () => {
+            localStorage.setItem("nombre", this.getAttribute("name"));
+            localStorage.setItem("descripcion", descripcion);
+            localStorage.setItem("precio", precio);
+
+            window.location.href = './src/product/product.html';
+        });
+    }
+}
+customElements.define('card-product', Products);
 
