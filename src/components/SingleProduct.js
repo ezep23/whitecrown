@@ -5,12 +5,12 @@ class Product extends HTMLElement {
         
         // Producto
         const HTML = `<div class="contenedor">
-                            <img id="imagen" src="./img/${localStorage.getItem("nombre")}.jpg">
+                            <img id="imagen" src="../img/${localStorage.getItem("nombre")}.jpg">
                             <div id="contenedor-info">
                                 <p class="titulo">${localStorage.getItem("nombre").toUpperCase()}</p>
-                                <slot name="descripcion"></slot>
-                                <slot name="precio"></slot>
-                                <button>
+                                <slot class="descripcion" name="descripcion">${localStorage.getItem("descripcion")}</slot>
+                                <slot class="precio" name="precio">${localStorage.getItem("precio")}</slot>
+                                <button id="boton">
                                     ${localStorage.getItem("email") ? `<li href="./login">Iniciar sesión</li>` : `<li>Añadir al carrito</li>` }
                                 </button>
                             </div>
@@ -25,35 +25,44 @@ class Product extends HTMLElement {
         style.textContent = `
             .contenedor {
                 display: flex;
-                padding: 20px;
+                padding: 30px;
+                margin: 40px;
                 gap: 6px;
                 border: 2px solid #000;
             }
             
-            .imagen {
+            #imagen {
                 height: 300px;
                 width: 300px;
-                border: 2px solid grey;
+                
             }
 
             .titulo {
-                font-size: 1.2rem;
+                font-size: 2rem;
+                margin: 10px;
                 font-weight: bold;
             }
 
-            span {
+            .descripcion {
                 text-align: justify;
+                display: flex;
+                margin: 20px;
             }
 
             .precio{
                 font-weight: bold;
+                display: flex;
+                margin: 20px;
             }
-
-            button {
+            
+            #boton{
+                display: flex;
+                list-style: none;
                 background-color: #000;
                 color: #ffffff;
                 cursor: pointer;
-                padding: 10px;
+                padding: 20px;
+                margin: 10px;
                 border-radius: 50px;
                 width: 50%;
             }
