@@ -1,14 +1,15 @@
 <template>
-  <Counter />
-  <TaskList />
+  <Navbar />
 </template>
 
-<script setup>
-  import Counter from './components/Counter.vue';
-  import TaskList from './components/TaskList.vue';
+<script>
+  import Navbar from './components/Navbar.vue';
 
+  export default {
+  components: {
+    Navbar,  
+  },
+};
 </script>
 
-<style scoped>
 
-</style>
