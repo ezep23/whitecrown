@@ -2,19 +2,23 @@
     <header class="bg-black max-h-fit">
         <nav class="flex items-center justify-between p-4">
             <img src="../assets/icon.svg" alt="icon" class="h-8"/>
-            <!-- <div>
+            <div class="m-6">
                 <ul class="flex space-x-6 text-white md:flex">
                     <li>
-                        <router-link to="/Home">Productos</router-link>
+                        <router-link to="/products">Productos</router-link>
                     </li>
                     <li>
                         <router-link to="/cart">Carrito</router-link>
                     </li>
                     <li>
-                        <router-link to="/User">Checkout</router-link>
+                        <router-link to="/checkout">Checkout</router-link>
                     </li>
                 </ul>
-            </div> -->
+            </div>
+            <div>
+                <p v-if="userStore.isAuthenticated">Carrito: {{ cartStore.totalItems }}</p>
+                <p v-else class="text-white">Carrito: 0</p>
+            </div>
             <div class="p-4">
                 <p v-if="userStore.isAuthenticated">
                     Bienvenido, {{ userStore.user.username }}!
@@ -22,13 +26,7 @@
                     Cerrar sesión
                     </button>
                 </p>
-                <!-- <router-link v-else to="/login" class="text-blue-500">
-                    Iniciar Sesión
-                </router-link> -->
-            </div>
-            <div>
-                <p v-if="userStore.isAuthenticated">Carrito: {{ cartStore.totalItems }}</p>
-                <p v-else class="text-white">Carrito: 0</p>
+                <router-link v-else to="/login" class="text-blue-500"> Iniciar Sesión </router-link>
             </div>
         </nav>
     </header>
