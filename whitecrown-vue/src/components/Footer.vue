@@ -1,5 +1,5 @@
 <template>
-    <footer class="bg-black text-white">
+    <div class="bg-black text-white bottom-0 absolute w-full">
         <div class="flex flex-col m-4">
             <div class="flex m-4">
                 <div class="m-4">
@@ -34,16 +34,21 @@
             </div>
             <hr>
             <div class="flex m-4">
-                asd
+                <input>
+                <button class="bg-white text-black m-2 ">Enviar</button>
             </div>
             <hr>
             <div class="flex m-4">
                 Creado por Ezequiel Pistone - 2024
             </div>
         </div>
-    </footer>
+    </div>
 </template>
 
 <script setup>
-
+    
 </script>
+
+<style scoped>
+ 
+</style>

@@ -1,17 +1,15 @@
 import { createRouter, createWebHistory } from 'vue-router';
 
 import Home from '../views/Home.vue';
-import ProductList from '../views/ProductList.vue';
 import Cart from '../views/Cart.vue';
-import LoginForm from '../components/LoginForm.vue';
-import CheckoutForm from '../components/CheckoutForm.vue';
+import Profile from '../views/Profile.vue';
+import Products from '../views/ProductList.vue'
 
 const routes = [
   { path: '/', component: Home },
-  { path: '/login', component: LoginForm },
   { path: '/cart', component: Cart },
-  { path: '/checkout', component: CheckoutForm },
-  { path: '/products', component: ProductList },
+  { path: '/profile', component: Profile },
+  { path: '/products', component: Products },
 ];
 
 const router = createRouter({
