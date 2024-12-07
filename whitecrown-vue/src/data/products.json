@@ -1,21 +1,52 @@
 [
-    {
-      "id": 1,
-      "name": "Camiseta Vue.js",
-      "price": 19.99,
-      "image": "https://via.placeholder.com/150"
-    },
-    {
-      "id": 2,
-      "name": "Taza Vue.js",
-      "price": 9.99,
-      "image": "https://via.placeholder.com/150"
-    },
-    {
-      "id": 3,
-      "name": "Pegatina Vue.js",
-      "price": 4.99,
-      "image": "https://via.placeholder.com/150"
-    }
+  {
+    "id": 1,
+    "name": "CAMISETA",
+    "description": "Una camiseta hecha 100% de algodón",
+    "price": 19.99,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 2,
+    "name": "BUZO",
+    "description": "Un buzo hecha 100% de algodón",
+    "price": 9.99,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 3,
+    "name": "CAMPERA",
+    "description": "Una campera hecha 100% de algodón",
+    "price": 4.99,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 4,
+    "name": "CAMPERA",
+    "description": "Una campera hecha 100% de algodón",
+    "price": 4.99,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 5,
+    "name": "SWEATER",
+    "description": "Un sweater hecha 100% de algodón",
+    "price": 4.99,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 6,
+    "name": "GORRO",
+    "description": "Un gorro hecha 100% de algodón",
+    "price": 4.99,
+    "image": "https://via.placeholder.com/150"
+  },
+  {
+    "id": 7,
+    "name": "PANTALON",
+    "description": "Un pantalon hecha 100% de algodón",
+    "price": 4.99,
+    "image": "https://via.placeholder.com/150"
+  }
 ]
   
