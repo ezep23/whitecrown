@@ -11,7 +11,3 @@
     import CheckoutForm from '../components/CheckoutForm.vue';
     import Footer from '../components/Footer.vue';
 </script>
-
-<style scoped>
-
-</style>
