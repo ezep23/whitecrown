@@ -13,7 +13,7 @@
               <router-link to="/cart" class="hover:text-gray-300">Carrito</router-link>
             </li>
             <li>
-              <router-link to="/checkout" class="hover:text-gray-300">Checkout</router-link>
+              <router-link to="/cart" class="hover:text-gray-300">Checkout</router-link>
             </li>
           </ul>
         </div>
@@ -36,7 +36,7 @@
                 Cerrar sesión
               </button>
             </p>
-            <router-link v-else to="/login" class="text-white-500 hover:text-gray-300">
+            <router-link v-else to="/profile" class="text-white-500 hover:text-gray-300">
               Iniciar Sesión
             </router-link>
           </div>

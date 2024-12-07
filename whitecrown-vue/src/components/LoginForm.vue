@@ -38,12 +38,19 @@
       const password = ref('');
       const errorMessage = ref('');
   
-      const handleLogin = () => {
-        const success = userStore.login(username.value, password.value);
-        if (!success) {
-          errorMessage.value = 'Credenciales incorrectas';
-        }
-      };
+      const handleLogin = async () => {
+        try {
+          const success = await userStore.login(username.value, password.value);
+          if (success) {
+            router.push('/profile'); // Redirige al perfil después de iniciar sesión
+          } else {
+            errorMessage.value = 'Credenciales incorrectas';
+          }
+        } catch (error) {
+          errorMessage.value = 'Error durante el inicio de sesión';
+          console.error(error);
+          }
+        };
   
       return { username, password, errorMessage, handleLogin };
     },
