@@ -30,7 +30,7 @@
   
       const handleCheckout = () => {
         if (cardNumber.value.length === 16) {
-          cartStore.cart = []; // Vacía el carrito después del pago
+          cartStore.cart = []; 
           message.value = 'Pago realizado con éxito';
         } else {
           message.value = 'Número de tarjeta inválido';

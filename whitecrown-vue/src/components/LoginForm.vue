@@ -42,7 +42,7 @@
         try {
           const success = await userStore.login(username.value, password.value);
           if (success) {
-            router.push('/profile'); // Redirige al perfil después de iniciar sesión
+            router.push('/profile'); 
           } else {
             errorMessage.value = 'Credenciales incorrectas';
           }

@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-black text-white bottom-0 absolute w-full">
+    <div class="bg-black text-white bottom-0 w-full">
         <div class="flex flex-col mx-[8%] m-4">
             <div class="flex">
                 <div class="m-4">

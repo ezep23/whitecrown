@@ -6,16 +6,16 @@
                 class="flex border p-10 m-5"
                 v-if="selectedProduct">
                 <div class="flex flex-col border p-10">
-                    <img >
-                    asd
+                    <img :src="selectedProduct.image">
                 </div>
-                <div class="flex flex-col border p-10">                
-                    <h2>{{ selectedProduct.name }}</h2>
-                    <span>{{ selectedProduct.description }}</span>
-                    <p>PRECIO: ${{ selectedProduct.price }}</p>
+                <div class="flex flex-col gap-2 border p-10">                
+                    <h2 class="text-2xl font-bold">{{ selectedProduct.name }}</h2>
+                    <div class="my-2">
+                        <span>{{ selectedProduct.description }}</span>
+                        <p class="font-bold">${{ selectedProduct.price }}</p>
+                    </div>
                     <button
-                        class="rounded-full bg-black text-white p-4"
-                    >
+                        class="bg-black text-white p-2 mt-2 rounded-full font-bold text-lg hover:transition 0.8s ease-in hover:text-black border-black hover:bg-white">
                     COMPRAR</button>
                 </div>
             </div>
