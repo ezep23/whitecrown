@@ -1,13 +1,13 @@
 <template>
     <div>
         <Header />
-        <Carrousel />
+        <Products />
         <Footer />
     </div>
 </template>
 
 <script setup>
     import Header from '../components/Header.vue';
-    import Carrousel from '../components/Carrousel.vue';
+    import Products from '../components/Products.vue';
     import Footer from '../components/Footer.vue';
 </script>
