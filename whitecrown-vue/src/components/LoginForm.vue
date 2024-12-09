@@ -24,8 +24,8 @@
           />
         </div>
         <div class="mt-6">
-          <button class="bg-white text-black py-2 px-4 rounded" type="submit">Iniciar Sesión</button>
-          <router-link to="/login" class="text-gray-300 mx-4">¿No estas registrado?</router-link>
+          <button class="bg-white text-black py-2 px-4 rounded hover:bg-black hover:text-white transition 0.5s ease-in border" type="submit">Enviar</button>
+          <router-link to="/signup" class="text-white mx-4 hover:underline">¿No estas registrado?</router-link>
         </div>
         <p v-if="errorMessage" class="text-red-500 mt-2">{{ errorMessage }}</p>
       </form>
