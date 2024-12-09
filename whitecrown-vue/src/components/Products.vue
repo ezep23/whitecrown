@@ -1,6 +1,7 @@
 <template>
     <div>
-        <div class="m-6 mx-[8%]">
+        <div class="m-4 mx-[8%]">
+            <h3 class="text-center text-5xl font-bold mt-6">PRODUCTOS</h3>
             <ul class="grid grid-cols-3 m-4">
                 <li v-for="(product, index) in products" :key="product.id">
                     <div class="flex flex-col gap-2 m-6 p-10 border">
