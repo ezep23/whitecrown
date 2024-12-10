@@ -12,7 +12,7 @@
                             <p>${{ product.price }}</p>
                         </div>
                         <button 
-                            class="bg-black text-white p-2 mt-2 rounded-full font-bold text-lg hover:transition 0.8s ease-in hover:text-black border-black hover:bg-white"
+                            class="bg-black text-white p-2 mt-2 rounded-full font-bold text-lg hover:transition 0.8s ease-in hover:text-black border hover:bg-white"
                             @click="viewProduct(product.id)">
                         COMPRAR
                         </button>
