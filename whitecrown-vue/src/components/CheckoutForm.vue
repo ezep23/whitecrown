@@ -21,6 +21,7 @@
   
 <script>
   import { useCartStore } from '../store/cart';
+  import { ref } from 'vue';
   
   export default {
     setup() {

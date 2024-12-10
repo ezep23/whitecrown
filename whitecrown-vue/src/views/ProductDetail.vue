@@ -14,9 +14,14 @@
                         <span>{{ selectedProduct.description }}</span>
                         <p class="font-bold">${{ selectedProduct.price }}</p>
                     </div>
-                    <button
-                        class="bg-black text-white p-2 mt-2 rounded-full font-bold text-lg hover:transition 0.8s ease-in hover:text-black border-black hover:bg-white">
-                    COMPRAR</button>
+                    <p v-if="userStore.isAuthenticated">
+                        <button class="bg-black text-white p-2 mt-2 rounded-full font-bold text-lg hover:transition 0.8s ease-in hover:text-black border-black hover:bg-white">
+                        Añadir al carrito
+                        </button>
+                    </p>
+                    <router-link v-else to="/profile" class="text-white bg-black p-2 mt-2 rounded-full font-bold text-lg hover:transition 0.8s ease-in hover:text-black border-black hover:bg-white">
+                        Iniciar Sesión
+                    </router-link>
                 </div>
             </div>
         </div>
@@ -25,6 +30,9 @@
 </template>
   
 <script setup>
+  import { useUserStore } from '../store/user';
+  const userStore = useUserStore();
+  
   import { ref, onMounted } from 'vue';
   import { useRoute } from 'vue-router';
   import products from '../data/products.json' 
